@@ -4,7 +4,15 @@ body {
   text-align: center;
 }
 
-.container {
+.current-weather-container {
+  display: block;
+  margin: 30px auto;
+  width: 700px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.forecast-container {
   display: block;
   margin: 30px auto;
   width: 700px;
