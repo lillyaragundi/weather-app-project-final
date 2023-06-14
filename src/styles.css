@@ -2,21 +2,35 @@ body {
   background-color: #6f96a2;
   color: white;
   text-align: center;
+  font-family: "Handlee", cursive;
+}
+
+h2 {
+  padding-top: 15px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h3 {
+  padding: 15px;
 }
 
 .current-weather-container {
   display: block;
   margin: 30px auto;
   width: 700px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  padding: 30px;
 }
 
 .forecast-container {
   display: block;
   margin: 30px auto;
   width: 700px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
 
@@ -27,4 +41,25 @@ body {
   border: none;
   width: 300px;
   color: #6f96a2;
+}
+
+.current-button {
+  border-radius: 5px;
+  font-size: 13px;
+  box-shadow: none;
+  border: none;
+  padding: 3px 20px;
+}
+
+.temperature {
+  padding: 30px;
+}
+
+.temp-metric {
+  font-size: 15px;
+}
+
+.cloudy-icon {
+  padding: 15px;
+  font-size: 50px;
 }
