@@ -5,18 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Best Weather App</title>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/73b7dc323e.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <div class="container">
-      <h1>Bonjour World</h1>
-      <a href="" class="btn btn-primary">Click here!</a>
+      <div class="current-weather-container">
+        <form>
+          <input
+            type="search"
+            class="city-search"
+            id="city-search"
+            placeholder="Search City"
+          />
+        </form>
+        <button class="current-button">Current Location</button>
+        <h1>Dallas</h1>
+        <h2>Friday 18:45</h2>
+        <span class="temperature">80°F</span>
+          <div class="temp-metric">
+            <span class="fahrenheit">°F</span>
+            |
+            <span class="celsius">°C</span>
+          </div>
+          <i class="fa-solid fa-cloud-sun cloudy-icon"></i>
+        <h3>Clear</h3>
+      </div>
+      <div class="forecast-container">
+        <h3>Weekly Forecast</h3>
+        <hr />
+        <div>
+          <div class="col forecast">
+            <div class="row-5 day-1">
+              <span class="weekday"> Mon </span>
+              <span class="weather-icon">
+                <i class="fa-solid fa-sun"></i>
+              </span>
+              <span class="temperature"> 70°/89° </span>
+            </div>
+            <hr />
+            <div class="row-5 day-2">
+              <span class="weekday"> Tue </span>
+              <span class="weather-icon">
+                <i class="fa-solid fa-sun"></i>
+              </span>
+              <span class="temperature"> 72°/90° </span>
+            </div>
+            <hr />
+            <div class="row-5 day-3">
+              <span class="weekday"> Wed </span>
+              <span class="weather-icon">
+                <i class="fa-solid fa-cloud-sun"></i>
+              </span>
+              <span class="temperature"> 68°/89° </span>
+            </div>
+            <hr />
+            <div class="row-5 day-4">
+              <span class="weekday"> Thu </span>
+              <span class="weather-icon">
+                <i class="fa-solid fa-cloud-rain"></i>
+              </span>
+              <span class="temperature"> 66°/87° </span>
+            </div>
+            <hr />
+            <div class="row-5 day-5">
+              <span class="weekday"> Fri </span>
+              <span class="weather-icon">
+                <i class="fa-solid fa-cloud-rain"></i>
+                </span>
+              <span class="temperature"> 65°/84° </span>
+            </div>
+          </div>
+      </div>
     </div>
     <script src="src/app.js"></script>
   </body>

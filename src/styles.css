@@ -1,3 +1,22 @@
-h1 {
-  color: blueviolet;
+body {
+  background-color: #6f96a2;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  display: block;
+  margin: 30px auto;
+  width: 700px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.city-search {
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  width: 300px;
+  color: #6f96a2;
 }
