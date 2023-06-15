@@ -17,6 +17,10 @@ h3 {
   padding: 15px;
 }
 
+h7 {
+  padding: 20px;
+}
+
 .current-weather-container {
   display: block;
   margin: 30px auto;
