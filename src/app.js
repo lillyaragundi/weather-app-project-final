@@ -1,7 +1,7 @@
 // Day and Time
 let now = new Date();
 
-let h7 = document.querySelector("h7");
+let h7 = document.querySelector("#time");
 
 let weekday = [
   "Sunday",
@@ -24,14 +24,21 @@ h7.innerHTML = `${day} ${hour}:${minutes}`;
 // Search engine / default city
 function showTemp(response) {
   let temperature = Math.round(response.data.main.temp);
+  let iconElement = document.querySelector("#weather-icon");
   document.querySelector("h2").innerHTML = response.data.name;
   document.querySelector("h1").innerHTML = `${temperature}°F`;
   document.querySelector(".description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
   document.querySelector(".wind-speed").innerHTML = Math.round(
     response.data.wind.speed
   );
-  console.log(response.data);
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  //console.log(response.data);
 }
 
 function submitCity(event) {
