@@ -28,6 +28,10 @@ function showTemp(response) {
   document.querySelector("h1").innerHTML = `${temperature}°F`;
   document.querySelector(".description").innerHTML =
     response.data.weather[0].main;
+  document.querySelector(".wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  console.log(response.data);
 }
 
 function submitCity(event) {
