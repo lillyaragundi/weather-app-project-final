@@ -23,10 +23,12 @@ h7.innerHTML = `${day} ${hour}:${minutes}`;
 
 // Search engine / default city
 function showTemp(response) {
-  let temperature = Math.round(response.data.main.temp);
+  let fahrenheitTemperature = response.data.main.temp;
+
+  let temperature = Math.round(fahrenheitTemperature);
   let iconElement = document.querySelector("#weather-icon");
   document.querySelector("h2").innerHTML = response.data.name;
-  document.querySelector("h1").innerHTML = `${temperature}°F`;
+  document.querySelector("h1").innerHTML = `${temperature}°`;
   document.querySelector(".description").innerHTML =
     response.data.weather[0].description;
   document.querySelector(".wind-speed").innerHTML = Math.round(
@@ -58,8 +60,6 @@ function citySearch(city) {
 let search = document.querySelector("form");
 search.addEventListener("submit", submitCity);
 
-citySearch("Dallas");
-
 // Current location button feature
 
 function getCurrentLocation(event) {
@@ -79,3 +79,31 @@ function searchCurrentLocation(position) {
 
 let currentLocationButton = document.querySelector(".current-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+// Unit conversion
+
+function displayFahrenheit(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector(".main-temperature");
+  tempElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsius(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector(".main-temperature");
+  celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
+  tempElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let fahrenheitTemperature = null;
+
+let showFahrenheit = document.querySelector(".fahrenheit");
+showFahrenheit.addEventListener("click", displayFahrenheit);
+
+let showCelsius = document.querySelector(".celsius");
+showCelsius.addEventListener("click", displayCelsius);
+
+console.log(fahrenheitTemperature);
+
+//default city
+citySearch("Dallas");

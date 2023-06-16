@@ -63,6 +63,15 @@ h7 {
   font-size: 15px;
 }
 
+.fahrenheit {
+  color: white;
+  text-decoration: none;
+}
+.celsius {
+  color: white;
+  text-decoration: none;
+}
+
 .cloudy-icon {
   padding: 15px;
   font-size: 50px;
