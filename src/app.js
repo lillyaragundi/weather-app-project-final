@@ -23,7 +23,7 @@ h7.innerHTML = `${day} ${hour}:${minutes}`;
 
 // Search engine / default city
 function showTemp(response) {
-  let fahrenheitTemperature = response.data.main.temp;
+  fahrenheitTemperature = response.data.main.temp;
 
   let temperature = Math.round(fahrenheitTemperature);
   let iconElement = document.querySelector("#weather-icon");
@@ -85,14 +85,14 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 function displayFahrenheit(event) {
   event.preventDefault();
   let tempElement = document.querySelector(".main-temperature");
-  tempElement.innerHTML = Math.round(fahrenheitTemperature);
+  tempElement.innerHTML = Math.round(fahrenheitTemperature) + "°";
 }
 
 function displayCelsius(event) {
   event.preventDefault();
   let tempElement = document.querySelector(".main-temperature");
-  celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
-  tempElement.innerHTML = Math.round(celsiusTemperature);
+  let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
+  tempElement.innerHTML = Math.round(celsiusTemperature) + "°";
 }
 
 let fahrenheitTemperature = null;
