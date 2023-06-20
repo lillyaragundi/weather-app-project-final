@@ -6,12 +6,12 @@ body {
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 35px;
   padding-top: 20px;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 60px;
   padding-top: 5px;
 }
 
@@ -27,7 +27,7 @@ h6 {
 .current-weather-container {
   display: block;
   margin: 30px auto;
-  width: 500px;
+  width: 600px;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 30px;
@@ -36,7 +36,7 @@ h6 {
 .forecast-container {
   display: block;
   margin: 30px auto;
-  width: 500px;
+  width: 600px;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
@@ -45,14 +45,15 @@ h6 {
   border-radius: 5px;
   margin-top: 20px;
   margin-bottom: 20px;
+  margin-left: 20px;
   border: none;
-  width: 300px;
+  width: 350px;
   color: #6f96a2;
 }
 
 .current-button {
   margin-top: 21px;
-  margin-left: 35px;
+  margin-left: 30px;
   border-radius: 5px;
   font-size: 13px;
   box-shadow: none;
