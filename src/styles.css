@@ -6,25 +6,26 @@ body {
 }
 
 h2 {
-  padding-top: 15px;
+  font-size: 40px;
+  padding-top: 20px;
 }
 
 h1 {
   font-size: 50px;
+  padding-top: 5px;
 }
 
 h3 {
   padding: 15px;
 }
 
-h7 {
-  padding: 20px;
+h6 {
 }
 
 .current-weather-container {
   display: block;
   margin: 30px auto;
-  width: 700px;
+  width: 500px;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 30px;
@@ -33,7 +34,7 @@ h7 {
 .forecast-container {
   display: block;
   margin: 30px auto;
-  width: 700px;
+  width: 500px;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
@@ -48,6 +49,7 @@ h7 {
 }
 
 .current-button {
+  margin-top: 5px;
   border-radius: 5px;
   font-size: 13px;
   box-shadow: none;
@@ -55,20 +57,25 @@ h7 {
   padding: 3px 20px;
 }
 
+.main-one {
+  text-align: center;
+}
+
+.main-two {
+  text-align: center;
+}
+
 .temperature {
   padding: 30px;
 }
 
 .temp-metric {
-  font-size: 15px;
+  font-size: 13px;
 }
 
-.fahrenheit {
-  color: white;
-  text-decoration: none;
-}
+.fahrenheit,
 .celsius {
-  color: white;
+  color: #6f96a2;
   text-decoration: none;
 }
 
@@ -79,4 +86,14 @@ h7 {
 
 .description {
   text-transform: capitalize;
+}
+
+.temp-metric .active {
+  cursor: default;
+  color: white;
+}
+
+.weather-data {
+  list-style-type: none;
+  padding-left: 0px;
 }

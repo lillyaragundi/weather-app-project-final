@@ -31,8 +31,14 @@ function showTemp(response) {
   document.querySelector("h1").innerHTML = `${temperature}°`;
   document.querySelector(".description").innerHTML =
     response.data.weather[0].description;
+  document.querySelector(".feels-like").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
   document.querySelector(".wind-speed").innerHTML = Math.round(
     response.data.wind.speed
+  );
+  document.querySelector(".humidity").innerHTML = Math.round(
+    response.data.main.humidity
   );
   iconElement.setAttribute(
     "src",
@@ -40,7 +46,7 @@ function showTemp(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
-  //console.log(response.data);
+  console.log(response.data);
 }
 
 function submitCity(event) {
@@ -84,12 +90,16 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 function displayFahrenheit(event) {
   event.preventDefault();
+  showFahrenheit.classList.add("active");
+  showCelsius.classList.remove("active");
   let tempElement = document.querySelector(".main-temperature");
   tempElement.innerHTML = Math.round(fahrenheitTemperature) + "°";
 }
 
 function displayCelsius(event) {
   event.preventDefault();
+  showCelsius.classList.add("active");
+  showFahrenheit.classList.remove("active");
   let tempElement = document.querySelector(".main-temperature");
   let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
   tempElement.innerHTML = Math.round(celsiusTemperature) + "°";
@@ -97,13 +107,11 @@ function displayCelsius(event) {
 
 let fahrenheitTemperature = null;
 
-let showFahrenheit = document.querySelector(".fahrenheit");
+let showFahrenheit = document.querySelector("#fahrenheit-link");
 showFahrenheit.addEventListener("click", displayFahrenheit);
 
-let showCelsius = document.querySelector(".celsius");
+let showCelsius = document.querySelector("#celsius-link");
 showCelsius.addEventListener("click", displayCelsius);
-
-console.log(fahrenheitTemperature);
 
 //default city
 citySearch("Dallas");

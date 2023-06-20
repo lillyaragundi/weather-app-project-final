@@ -30,33 +30,49 @@
   <body>
     <div class="container">
       <div class="current-weather-container">
-        <form>
-          <input
-            type="search"
-            class="city-search"
-            id="city-search"
-            placeholder="Search City"
-            autocomplete="off"
-          />
-        </form>
-        <button class="current-button">Current Location</button>
-        <h2 id="city"></h2>
-        <h6>Last updated: <span id="time"></span></h6>
-        <h1 class="main-temperature">
-          <div>80°F</div>
-        </h1>
-        <div class="temp-metric">
-          <a href="#" id="fahrenheit-link" class="fahrenheit">°F</a>
-          |
-          <a href="#" id="celsius-link" class="celsius">°C</a>
+        <div class="row">
+          <div class="col-7">
+            <form>
+              <input
+                type="search"
+                class="city-search"
+                id="city-search"
+                placeholder="Search City"
+                autocomplete="off"
+              />
+            </form>
+          </div>
+          <div class="col-5">
+            <button class="current-button">Current Location</button>
+          </div>
         </div>
-        <img
-          src="https://openweathermap.org/img/wn/10d@2x.png"
-          alt="rain"
-          id="weather-icon"
-        />
-        <h4 class="description"></h4>
-        <h5>Wind speed: <span class="wind-speed">5</span>/mph</h5>
+        <div class="row">
+          <div class="col-6 main-one">
+            <h2 id="city"></h2>
+            <h6>Last updated: <span id="time"></span></h6>
+            <h1 class="main-temperature">
+              <div>80°F</div>
+            </h1>
+            <div class="temp-metric">
+              <a href="#" id="fahrenheit-link" class="fahrenheit active">°F</a>
+              |
+              <a href="#" id="celsius-link" class="celsius">°C</a>
+            </div>
+          </div>
+          <div class="col-6 main-two">
+            <img
+              src="https://openweathermap.org/img/wn/10d@2x.png"
+              alt="rain"
+              id="weather-icon"
+            />
+            <h4 class="description"></h4>
+            <ul class="weather-data">
+              <li>Feels like: <span class="feels-like"></span>°F</li>
+              <li>Wind speed: <span class="wind-speed"></span>mph</li>
+              <li>Humidity: <span class="humidity"></span>%</li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div class="forecast-container">
         <h3>Weekly Forecast</h3>
