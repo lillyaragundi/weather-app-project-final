@@ -101,3 +101,10 @@ h6 {
   list-style-type: none;
   padding-left: 0px;
 }
+
+.weekly-forecast {
+}
+
+.forecast-weekday {
+  font-size: 20px;
+}
