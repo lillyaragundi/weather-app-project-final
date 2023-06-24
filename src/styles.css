@@ -39,6 +39,7 @@ h6 {
   width: 600px;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  text-align: center;
 }
 
 .city-search {
@@ -83,11 +84,6 @@ h6 {
   text-decoration: none;
 }
 
-.cloudy-icon {
-  padding: 15px;
-  font-size: 50px;
-}
-
 .description {
   text-transform: capitalize;
 }
@@ -103,6 +99,8 @@ h6 {
 }
 
 .weekly-forecast {
+  text-align: center;
+  padding-left: 20px;
 }
 
 .forecast-weekday {

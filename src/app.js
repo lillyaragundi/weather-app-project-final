@@ -1,7 +1,7 @@
 // Day and Time
 let now = new Date();
 
-let h7 = document.querySelector("#time");
+let h6 = document.querySelector("#time");
 
 let weekday = [
   "Sunday",
@@ -19,7 +19,36 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 
-h7.innerHTML = `${day} ${hour}:${minutes}`;
+h6.innerHTML = `${day} ${hour}:${minutes}`;
+
+//forecast
+function forecastDisplay() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let forecastDays = ["Sun", "Mon", "Tues", "Wed", "Thurs"];
+  forecastDays.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+        <span class="forecast-weekday"> ${day} </span>
+        <img
+          src="https://openweathermap.org/img/wn/02d@2x.png"
+          alt="weather-icon"
+          width="55"
+        />
+        <div class="forecast-temps">
+          <span class="forecast-temp-min">66°</span>
+          <span class="forecast-temp-max">87°</span>
+        </div> 
+      </div>
+    `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 // Search engine / default city
 function showTemp(response) {
@@ -115,3 +144,4 @@ showCelsius.addEventListener("click", displayCelsius);
 
 //default city
 citySearch("Dallas");
+forecastDisplay();
