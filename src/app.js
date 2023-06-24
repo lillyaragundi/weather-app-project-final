@@ -22,6 +22,14 @@ if (minutes < 10) {
 h6.innerHTML = `${day} ${hour}:${minutes}`;
 
 //forecast
+function getForecast(coordinates) {
+  let apiKey = "34ae1065362d42545661451bda2b8a1f";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}`;
+  axios.get(apiUrl).then(forecastDisplay);
+
+  console.log(apiUrl);
+}
+
 function forecastDisplay() {
   let forecastElement = document.querySelector("#forecast");
 
@@ -75,7 +83,9 @@ function showTemp(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
-  console.log(response.data);
+  getForecast(response.data.coord);
+
+  //console.log(response.data);
 }
 
 function submitCity(event) {
@@ -144,4 +154,3 @@ showCelsius.addEventListener("click", displayCelsius);
 
 //default city
 citySearch("Dallas");
-forecastDisplay();
