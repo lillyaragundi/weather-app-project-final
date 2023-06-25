@@ -46,33 +46,25 @@
             <button class="current-button">Current Location</button>
           </div>
         </div>
-        <div class="row">
-          <div class="col-6 main-one">
-            <h2 id="city"></h2>
-            <h6>Last updated: <span id="time"></span></h6>
-            <h1 class="main-temperature">
-              <div>80°F</div>
-            </h1>
-            <div class="temp-metric">
-              <a href="#" id="fahrenheit-link" class="fahrenheit active">°F</a>
-              |
-              <a href="#" id="celsius-link" class="celsius">°C</a>
-            </div>
-          </div>
-          <div class="col-6 main-two">
-            <img
-              src="https://openweathermap.org/img/wn/10d@2x.png"
-              alt="rain"
-              id="weather-icon"
-            />
-            <h4 class="description"></h4>
-            <ul class="weather-data">
-              <li>Feels like: <span class="feels-like"></span>°F</li>
-              <li>Wind speed: <span class="wind-speed"></span>mph</li>
-              <li>Humidity: <span class="humidity"></span>%</li>
-            </ul>
-          </div>
+        <h6>Last updated: <span id="time"></span></h6>
+        <h2 id="city"></h2>
+        <div>
+          <img
+            src="https://openweathermap.org/img/wn/10d@2x.png"
+            alt="rain"
+            id="weather-icon"
+            class="weather-icon"
+          />
         </div>
+        <span class="main-temperature">80</span>
+        <span class="unit-metric">°F</span>
+
+        <h4 class="description"></h4>
+        <ul class="weather-data">
+          <li>Feels like: <span class="feels-like"></span>°F</li>
+          <li>Wind speed: <span class="wind-speed"></span>mph</li>
+          <li>Humidity: <span class="humidity"></span>%</li>
+        </ul>
       </div>
       <div class="forecast-container">
         <h3>Weekly Forecast</h3>

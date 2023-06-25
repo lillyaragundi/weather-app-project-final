@@ -5,18 +5,18 @@ body {
   font-family: "Handlee", cursive;
 }
 
-h2 {
-  font-size: 35px;
+h2,
+h3 {
+  font-size: 37px;
   padding-top: 20px;
 }
 
-h1 {
-  font-size: 60px;
-  padding-top: 5px;
+h3 {
+  padding: 17px;
 }
 
-h3 {
-  padding: 15px;
+h4 {
+  font-size: 27px;
 }
 
 h6 {
@@ -62,35 +62,22 @@ h6 {
   padding: 3px 20px;
 }
 
-.main-one {
-  text-align: center;
+.weather-icon {
+  width: 120px;
 }
 
-.main-two {
-  text-align: center;
+.main-temperature {
+  font-size: 60px;
 }
 
-.temperature {
-  padding: 30px;
-}
-
-.temp-metric {
-  font-size: 13px;
-}
-
-.fahrenheit,
-.celsius {
-  color: #6f96a2;
-  text-decoration: none;
+.unit-metric {
+  font-size: 25px;
+  position: relative;
+  bottom: 20px;
 }
 
 .description {
   text-transform: capitalize;
-}
-
-.temp-metric .active {
-  cursor: default;
-  color: white;
 }
 
 .weather-data {

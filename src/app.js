@@ -21,7 +21,7 @@ if (minutes < 10) {
 
 h6.innerHTML = `${day} ${hour}:${minutes}`;
 
-//forecast
+//Weekly Forecast
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -83,7 +83,7 @@ function showTemp(response) {
   let temperature = Math.round(fahrenheitTemperature);
   let iconElement = document.querySelector("#weather-icon");
   document.querySelector("h2").innerHTML = response.data.name;
-  document.querySelector("h1").innerHTML = `${temperature}°`;
+  document.querySelector(".main-temperature").innerHTML = `${temperature}`;
   document.querySelector(".description").innerHTML =
     response.data.weather[0].description;
   document.querySelector(".feels-like").innerHTML = Math.round(
@@ -102,8 +102,6 @@ function showTemp(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   getForecast(response.data.coord);
-
-  //console.log(response.data);
 }
 
 function submitCity(event) {
@@ -142,33 +140,6 @@ function searchCurrentLocation(position) {
 
 let currentLocationButton = document.querySelector(".current-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
-
-// Unit conversion
-
-function displayFahrenheit(event) {
-  event.preventDefault();
-  showFahrenheit.classList.add("active");
-  showCelsius.classList.remove("active");
-  let tempElement = document.querySelector(".main-temperature");
-  tempElement.innerHTML = Math.round(fahrenheitTemperature) + "°";
-}
-
-function displayCelsius(event) {
-  event.preventDefault();
-  showCelsius.classList.add("active");
-  showFahrenheit.classList.remove("active");
-  let tempElement = document.querySelector(".main-temperature");
-  let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
-  tempElement.innerHTML = Math.round(celsiusTemperature) + "°";
-}
-
-let fahrenheitTemperature = null;
-
-let showFahrenheit = document.querySelector("#fahrenheit-link");
-showFahrenheit.addEventListener("click", displayFahrenheit);
-
-let showCelsius = document.querySelector("#celsius-link");
-showCelsius.addEventListener("click", displayCelsius);
 
 //default city
 citySearch("Dallas");
