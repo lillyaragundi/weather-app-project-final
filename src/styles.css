@@ -100,9 +100,13 @@ h6 {
 
 .weekly-forecast {
   text-align: center;
-  padding-left: 20px;
+  padding-bottom: 20px;
 }
 
 .forecast-weekday {
   font-size: 20px;
+}
+
+.forecast-temp-min {
+  color: rgba(255, 255, 255, 0.5);
 }
